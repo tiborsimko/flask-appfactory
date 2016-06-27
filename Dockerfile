@@ -18,7 +18,7 @@ RUN pip install Flask \
                 coveralls \
                 ipython \
                 itsdangerous \
-                pep257 \
+                pydocstyle \
                 pytest \
                 pytest-cache \
                 pytest-cov \

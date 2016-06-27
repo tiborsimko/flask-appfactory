@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 #
 # This file is part of Flask-AppFactory
-# Copyright (C) 2015 CERN.
+# Copyright (C) 2015, 2016 CERN.
 #
 # Flask-AppFactory is free software; you can redistribute it and/or
 # modify it under the terms of the Revised BSD License; see LICENSE
@@ -19,7 +19,6 @@ from .app import load_application
 
 
 class CLIDiscoveryRegistry(ModuleAutoDiscoveryRegistry):
-
     """Discover CLI modules and register them on a command collection.
 
     Searches for a variable ``commands`` in a module ``cli`` in each package.

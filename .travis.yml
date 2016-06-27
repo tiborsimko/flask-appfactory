@@ -1,5 +1,5 @@
 # This file is part of Flask-AppFactory
-# Copyright (C) 2015 CERN.
+# Copyright (C) 2015, 2016 CERN.
 #
 # Flask-AppFactory is free software; you can redistribute it and/or
 # modify it under the terms of the Revised BSD License; see LICENSE
@@ -24,13 +24,13 @@ cache:
 
 install:
   # Install test dependencies
-  - "travis_retry pip install coveralls pep257 Sphinx twine wheel"
+  - "travis_retry pip install coveralls pydocstyle Sphinx twine wheel"
   - "travis_retry pip install pytest pytest-pep8 pytest-cov pytest-cache"
   - "travis_retry pip install -r requirements.${REQUIREMENTS}.txt"
-  - "travis_retry pip install -e ."
+  - "travis_retry pip install -e .[docs,tests]"
 
 script:
-  - pep257 flask_appfactory
+  - pydocstyle flask_appfactory
   - "sphinx-build -qnNW docs docs/_build/html"
   - python setup.py test
   - "sphinx-build -qnNW -b doctest docs docs/_build/doctest"

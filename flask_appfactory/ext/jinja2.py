@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 #
 # This file is part of Flask-AppFactory
-# Copyright (C) 2015 CERN.
+# Copyright (C) 2015, 2016 CERN.
 #
 # Flask-AppFactory is free software; you can redistribute it and/or
 # modify it under the terms of the Revised BSD License; see LICENSE
@@ -43,7 +43,6 @@ except ImportError:  # pragma: no cover
 
 
 class OrderAwareDispatchingJinjaLoader(DispatchingJinjaLoader):
-
     """Order aware dispatching Jinja loader.
 
     Customization of default Flask Jinja2 template loader. By default the
